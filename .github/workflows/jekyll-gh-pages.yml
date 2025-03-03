@@ -1,0 +1,47 @@
+name: Deploy Hexo to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]  # 监听源码分支（如 main）
+
+permissions:
+  contents: write  # 允许写入 gh-pages 分支
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. 检出源码
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. 安装 Node.js 环境
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"  # Hexo 推荐 Node.js 18+
+          cache: "npm"
+
+      # 3. 安装 Hexo 依赖
+      - name: Install Dependencies
+        run: |
+          npm install hexo-cli -g
+          npm install
+
+      # 4. 生成静态文件
+      - name: Build Site
+        run: hexo clean && hexo generate
+
+      # 5. 部署到 gh-pages 分支
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public  # Hexo 默认生成目录
+          publish_branch: gh-pages  # 目标分支
