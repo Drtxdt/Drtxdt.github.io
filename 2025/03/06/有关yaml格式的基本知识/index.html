@@ -1,0 +1,346 @@
+<!DOCTYPE html><html lang="en" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>有关yaml格式的基本知识 | 铃兰爱吃百香果的博客~</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","code_fold":-1,"search":{"preload":"all","activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><script src="//unpkg.com/mermaid@10.5.0/dist/mermaid.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+ menuSettings: {
+   zoom: "None"
+ },
+ showMathMenu: false,
+ jax: ["input/TeX","output/CommonHTML"],
+ extensions: ["tex2jax.js"],
+ TeX: {
+   extensions: ["AMSmath.js","AMSsymbols.js"],
+   equationNumbers: {
+     autoNumber: "AMS"
+   }
+ },
+ tex2jax: {
+   inlineMath: [["\\(", "\\)"]],
+   displayMath: [["\\[", "\\]"]]
+ }
+});</script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.woff2") format('woff2');
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+ --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+ --light-background: url('/img/ce15644527e2fb43ab234946a04244312bbe036e.png@1192w.avif');
+ --theme-encrypt-confirm: 'confirm'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+  menuSettings: {
+    zoom: "None"
+  },
+  showMathMenu: false,
+  jax: ["input/TeX","output/CommonHTML"],
+  extensions: ["tex2jax.js"],
+  TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js"],
+    equationNumbers: {
+      autoNumber: "AMS"
+    }
+  },
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]]
+  }
+});
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css" integrity="sha256-TThEtR+XalhWKkfF383YLOrI50NGNeIqrzS+q08afrY=" crossorigin="anonymous"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>有关yaml格式的基本知识</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2025-03-06T14:36:21.000Z" id="date"> 2025-03-06</time></div></span><br><span>Last Update: <div class="control"><time datetime="2025-03-06T14:42:42.606Z" id="updated"> 2025-03-06</time></div></span></div></div><hr><div id="post-content"><hr>
+<h1 id="深入解析YAML：从基础语法到高级应用"><a href="#深入解析YAML：从基础语法到高级应用" class="headerlink" title="深入解析YAML：从基础语法到高级应用"></a>深入解析YAML：从基础语法到高级应用</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ol>
+<li>YAML简介</li>
+<li>核心语法结构</li>
+<li>数据类型详解</li>
+<li>高级语法特性</li>
+<li>常见应用场景</li>
+<li>工具与库支持</li>
+<li>注意事项与最佳实践</li>
+<li>完整示例集合</li>
+</ol>
+<hr>
+<h2 id="1-YAML简介"><a href="#1-YAML简介" class="headerlink" title="1. YAML简介"></a>1. YAML简介</h2><p><strong>YAML</strong>（YAML Ain’t Markup Language）是一种人类友好的数据序列化标准，具有以下特性：<br>• 强调可读性 &gt; 配置复杂性<br>• 适用于配置文件、数据交换、持久化存储<br>• 支持复杂数据类型和对象引用<br>• 跨语言支持（Python/Java/Go/Ruby等）<br>• 文件扩展名：<code>.yaml</code> 或 <code>.yml</code></p>
+<p>与同类技术的对比：</p>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>YAML</th>
+<th>JSON</th>
+<th>XML</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>可读性</td>
+<td>高</td>
+<td>中</td>
+<td>低</td>
+</tr>
+<tr>
+<td>注释支持</td>
+<td>✓</td>
+<td>✗</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>数据类型</td>
+<td>自动推断</td>
+<td>显式声明</td>
+<td>无</td>
+</tr>
+<tr>
+<td>文件大小</td>
+<td>紧凑</td>
+<td>中等</td>
+<td>庞大</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="2-核心语法结构"><a href="#2-核心语法结构" class="headerlink" title="2. 核心语法结构"></a>2. 核心语法结构</h2><h3 id="2-1-文档结构"><a href="#2-1-文档结构" class="headerlink" title="2.1 文档结构"></a>2.1 文档结构</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># 文档开始标记</span><br><span class="hljs-meta">--- </span><br><span class="hljs-comment"># 文档内容</span><br><span class="hljs-attr">key:</span> <span class="hljs-string">value</span><br><span class="hljs-comment"># 文档结束标记</span><br><span class="hljs-string">...</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="2-2-注释"><a href="#2-2-注释" class="headerlink" title="2.2 注释"></a>2.2 注释</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># 单行注释</span><br><span class="hljs-attr">key:</span> <span class="hljs-string">value</span>  <span class="hljs-comment"># 行尾注释</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="2-3-键值对"><a href="#2-3-键值对" class="headerlink" title="2.3 键值对"></a>2.3 键值对</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">simple:</span> <span class="hljs-string">value</span><br><span class="hljs-attr">quoted:</span> <span class="hljs-string">"带特殊字符的值"</span><br><span class="hljs-attr">nested.key:</span> <span class="hljs-string">多级键</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="2-4-列表"><a href="#2-4-列表" class="headerlink" title="2.4 列表"></a>2.4 列表</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># 块格式</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">Item</span> <span class="hljs-number">1</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">Item</span> <span class="hljs-number">2</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">Item</span> <span class="hljs-number">3</span><br><br><span class="hljs-comment"># 流格式</span><br>[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]<br></code></pre></td></tr></table></figure>
+
+<h3 id="2-5-多行文本"><a href="#2-5-多行文本" class="headerlink" title="2.5 多行文本"></a>2.5 多行文本</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">literal:</span> <span class="hljs-string">|</span><br><span class="hljs-string">  保留换行和缩进</span><br><span class="hljs-string">  第二行</span><br><span class="hljs-string"></span><br><span class="hljs-attr">folded:</span> <span class="hljs-string">&gt;</span><br><span class="hljs-string">  合并换行为空格</span><br><span class="hljs-string">  但保留段落分隔</span><br></code></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="3-数据类型详解"><a href="#3-数据类型详解" class="headerlink" title="3. 数据类型详解"></a>3. 数据类型详解</h2><h3 id="3-1-标量类型"><a href="#3-1-标量类型" class="headerlink" title="3.1 标量类型"></a>3.1 标量类型</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">string:</span> <span class="hljs-string">"Hello World"</span><br><span class="hljs-attr">integer:</span> <span class="hljs-number">123</span><br><span class="hljs-attr">float:</span> <span class="hljs-number">3.14</span><br><span class="hljs-attr">boolean:</span> <br>  <span class="hljs-bullet">-</span> <span class="hljs-literal">true</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-literal">false</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-literal">yes</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-literal">no</span><br><span class="hljs-attr">null:</span> <span class="hljs-string">~</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2023-07-20</span><br><span class="hljs-attr">datetime:</span> <span class="hljs-number">2023-07-20T15:30:00+08:00</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="3-2-集合类型"><a href="#3-2-集合类型" class="headerlink" title="3.2 集合类型"></a>3.2 集合类型</h3><p><strong>映射（Map）</strong>:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">key1:</span> <span class="hljs-string">value1</span><br><span class="hljs-attr">key2:</span> <span class="hljs-string">value2</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>嵌套结构</strong>:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">parent:</span><br>  <span class="hljs-attr">child1:</span> <span class="hljs-string">value1</span><br>  <span class="hljs-attr">child2:</span> <br>    <span class="hljs-bullet">-</span> <span class="hljs-string">item1</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">item2</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="3-3-特殊类型"><a href="#3-3-特殊类型" class="headerlink" title="3.3 特殊类型"></a>3.3 特殊类型</h3><p><strong>二进制数据</strong>:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">binary:</span> <span class="hljs-type">!!binary</span> <span class="hljs-string">|</span><br><span class="hljs-string">  R0lGODlhDAAMAIQAAP//9/X</span><br><span class="hljs-string">  17unp5WZmZgAAAOfn515eXv</span><br><span class="hljs-string">  Pz7Y6OjuDg4H+ho5SUlBQU</span><br><span class="hljs-string">  FAAAD=</span><br></code></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="4-高级语法特性"><a href="#4-高级语法特性" class="headerlink" title="4. 高级语法特性"></a>4. 高级语法特性</h2><h3 id="4-1-锚点与别名"><a href="#4-1-锚点与别名" class="headerlink" title="4.1 锚点与别名"></a>4.1 锚点与别名</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">defaults:</span> <span class="hljs-meta">&amp;defaults</span><br>  <span class="hljs-attr">adapter:</span> <span class="hljs-string">postgres</span><br>  <span class="hljs-attr">host:</span> <span class="hljs-string">localhost</span><br><br><span class="hljs-attr">development:</span><br>  <span class="hljs-string">&lt;&lt;:</span> <span class="hljs-meta">*defaults</span><br>  <span class="hljs-attr">database:</span> <span class="hljs-string">dev_db</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="4-2-引用与合并"><a href="#4-2-引用与合并" class="headerlink" title="4.2 引用与合并"></a>4.2 引用与合并</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">base:</span> <span class="hljs-meta">&amp;base</span><br>  <span class="hljs-attr">name:</span> <span class="hljs-string">Base</span><br>  <span class="hljs-attr">values:</span> <span class="hljs-meta">&amp;base_values</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-number">1</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-number">2</span><br><br><span class="hljs-attr">derived:</span><br>  <span class="hljs-string">&lt;&lt;:</span> <span class="hljs-meta">*base</span><br>  <span class="hljs-attr">values:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-meta">*base_values</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-number">3</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="4-3-多文档支持"><a href="#4-3-多文档支持" class="headerlink" title="4.3 多文档支持"></a>4.3 多文档支持</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">document:</span> <span class="hljs-string">first</span><br><span class="hljs-string">...</span><br><span class="hljs-meta">---</span><br><span class="hljs-attr">document:</span> <span class="hljs-string">second</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="4-4-类型强制转换"><a href="#4-4-类型强制转换" class="headerlink" title="4.4 类型强制转换"></a>4.4 类型强制转换</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">string:</span> <span class="hljs-type">!!str</span> <span class="hljs-number">123</span><br><span class="hljs-attr">number:</span> <span class="hljs-type">!!float</span> <span class="hljs-string">"123.45"</span><br></code></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="5-常见应用场景"><a href="#5-常见应用场景" class="headerlink" title="5. 常见应用场景"></a>5. 常见应用场景</h2><ol>
+<li><strong>配置文件</strong>（Kubernetes, Docker Compose）</li>
+<li><strong>CI/CD管道</strong>（GitLab CI, GitHub Actions）</li>
+<li><strong>数据序列化</strong></li>
+<li><strong>API设计</strong>（OpenAPI/Swagger）</li>
+<li><strong>测试数据管理</strong></li>
+</ol>
+<hr>
+<h2 id="6-工具与库支持"><a href="#6-工具与库支持" class="headerlink" title="6. 工具与库支持"></a>6. 工具与库支持</h2><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>推荐库</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Python</td>
+<td>PyYAML, ruamel.yaml</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>SnakeYAML</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td>js-yaml</td>
+</tr>
+<tr>
+<td>Go</td>
+<td>go-yaml/yaml</td>
+</tr>
+<tr>
+<td>Ruby</td>
+<td>Psych</td>
+</tr>
+</tbody></table>
+<p><strong>验证工具</strong>：<br>• <a target="_blank" rel="noopener" href="https://www.yamllint.com/">YAML Lint</a><br>• VS Code YAML扩展</p>
+<hr>
+<h2 id="7-注意事项"><a href="#7-注意事项" class="headerlink" title="7. 注意事项"></a>7. 注意事项</h2><ol>
+<li><p><strong>缩进规则</strong><br>• 必须使用空格（推荐2空格）<br>• 禁止Tab键</p>
+</li>
+<li><p><strong>特殊字符转义</strong></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">special:</span> <span class="hljs-string">"需转义字符：\": {}[], &amp;*#?|-&gt;&lt;%=%@\`"</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><strong>性能考量</strong><br>• 避免深层嵌套（&gt;10层）<br>• 大文件建议分拆多文档</p>
+</li>
+</ol>
+<hr>
+<h2 id="8-完整示例集合"><a href="#8-完整示例集合" class="headerlink" title="8. 完整示例集合"></a>8. 完整示例集合</h2><h3 id="示例1：基础配置"><a href="#示例1：基础配置" class="headerlink" title="示例1：基础配置"></a>示例1：基础配置</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># application.yaml</span><br><span class="hljs-attr">server:</span><br>  <span class="hljs-attr">port:</span> <span class="hljs-number">8080</span><br>  <span class="hljs-attr">ssl:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">cors:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">"https://example.com"</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">"https://test.com"</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="示例2：复杂结构"><a href="#示例2：复杂结构" class="headerlink" title="示例2：复杂结构"></a>示例2：复杂结构</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">person:</span><br>  <span class="hljs-attr">name:</span> <span class="hljs-string">John</span> <span class="hljs-string">Doe</span><br>  <span class="hljs-attr">age:</span> <span class="hljs-number">35</span><br>  <span class="hljs-attr">address:</span> <span class="hljs-meta">&amp;main_address</span><br>    <span class="hljs-attr">street:</span> <span class="hljs-number">123</span> <span class="hljs-string">Main</span> <span class="hljs-string">St</span><br>    <span class="hljs-attr">city:</span> <span class="hljs-string">Anytown</span><br>  <span class="hljs-attr">shipping_address:</span> <span class="hljs-meta">*main_address</span><br>  <span class="hljs-attr">orders:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">id:</span> <span class="hljs-number">1</span><br>      <span class="hljs-attr">items:</span> [ <span class="hljs-string">"book"</span>, <span class="hljs-string">"pen"</span> ]<br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">id:</span> <span class="hljs-number">2</span><br>      <span class="hljs-attr">items:</span> [ <span class="hljs-string">"laptop"</span> ]<br></code></pre></td></tr></table></figure>
+
+<h3 id="示例3：多文档流"><a href="#示例3：多文档流" class="headerlink" title="示例3：多文档流"></a>示例3：多文档流</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-comment"># 数据库配置</span><br><span class="hljs-attr">database:</span><br>  <span class="hljs-attr">name:</span> <span class="hljs-string">primary</span><br>  <span class="hljs-attr">connection:</span> <span class="hljs-string">mysql://user@host</span><br><span class="hljs-string">...</span><br><span class="hljs-meta">---</span><br><span class="hljs-attr">database:</span><br>  <span class="hljs-attr">name:</span> <span class="hljs-string">replica</span><br>  <span class="hljs-attr">connection:</span> <span class="hljs-string">postgres://user@host</span><br></code></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>延伸学习</strong>：<br>• YAML 1.2规范文档<br>• JSON Schema到YAML的转换<br>• YAML与模板引擎的结合使用（Helm, Ansible）</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages" style="justify-content: flex-end"><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2025/03/06/HNU2025%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95/">HNU2025数据结构算法 Prev →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="To Catalog">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="Change Theme"></a><a onclick="BgmControl()"><svg id="bgm-control" viewBox="0 0 30 34" fill="currentColor" style="width: auto; height: 80%; transition: transform .3s;"><path d="M25.998 23.422V11.29h3.999v12.132h-3.999zM19.497 6.234h4.001v22.243h-4.001V6.234zM12.998.867h4v32.978h-4V.867zm-6.5 5.367h4.001v22.243H6.498V6.234zm-6.5 5.056h4v12.132h-4V11.29z"></path></svg><audio id="bgm" src="/audio/bgm.mp3" loop crossorigin="anonymous"> </audio></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/suzuran.png" alt="Logo" style="margin:0;border-radius:0;"></a><h1 id="Dr"><a href="/">铃兰爱吃百香果</a></h1><div id="description"><p></p></div><div id="social-links"><a class="social" target="_blank" rel="noopener" href="https://github.com/Drtxdt"><i class="fab fa-github" alt="GitHub"></i></a></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90YAML%EF%BC%9A%E4%BB%8E%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E5%88%B0%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">深入解析YAML：从基础语法到高级应用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95"><span class="toc-number">1.1.</span> <span class="toc-text">目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-YAML%E7%AE%80%E4%BB%8B"><span class="toc-number">1.2.</span> <span class="toc-text">1. YAML简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%A0%B8%E5%BF%83%E8%AF%AD%E6%B3%95%E7%BB%93%E6%9E%84"><span class="toc-number">1.3.</span> <span class="toc-text">2. 核心语法结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E6%96%87%E6%A1%A3%E7%BB%93%E6%9E%84"><span class="toc-number">1.3.1.</span> <span class="toc-text">2.1 文档结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%B3%A8%E9%87%8A"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.2 注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E9%94%AE%E5%80%BC%E5%AF%B9"><span class="toc-number">1.3.3.</span> <span class="toc-text">2.3 键值对</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E5%88%97%E8%A1%A8"><span class="toc-number">1.3.4.</span> <span class="toc-text">2.4 列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-%E5%A4%9A%E8%A1%8C%E6%96%87%E6%9C%AC"><span class="toc-number">1.3.5.</span> <span class="toc-text">2.5 多行文本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%AF%A6%E8%A7%A3"><span class="toc-number">1.4.</span> <span class="toc-text">3. 数据类型详解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%A0%87%E9%87%8F%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.4.1.</span> <span class="toc-text">3.1 标量类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E9%9B%86%E5%90%88%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.4.2.</span> <span class="toc-text">3.2 集合类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E7%89%B9%E6%AE%8A%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.4.3.</span> <span class="toc-text">3.3 特殊类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E7%89%B9%E6%80%A7"><span class="toc-number">1.5.</span> <span class="toc-text">4. 高级语法特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E9%94%9A%E7%82%B9%E4%B8%8E%E5%88%AB%E5%90%8D"><span class="toc-number">1.5.1.</span> <span class="toc-text">4.1 锚点与别名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E5%BC%95%E7%94%A8%E4%B8%8E%E5%90%88%E5%B9%B6"><span class="toc-number">1.5.2.</span> <span class="toc-text">4.2 引用与合并</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E5%A4%9A%E6%96%87%E6%A1%A3%E6%94%AF%E6%8C%81"><span class="toc-number">1.5.3.</span> <span class="toc-text">4.3 多文档支持</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-%E7%B1%BB%E5%9E%8B%E5%BC%BA%E5%88%B6%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.5.4.</span> <span class="toc-text">4.4 类型强制转换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%B8%B8%E8%A7%81%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">1.6.</span> <span class="toc-text">5. 常见应用场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E5%B7%A5%E5%85%B7%E4%B8%8E%E5%BA%93%E6%94%AF%E6%8C%81"><span class="toc-number">1.7.</span> <span class="toc-text">6. 工具与库支持</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">1.8.</span> <span class="toc-text">7. 注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E5%AE%8C%E6%95%B4%E7%A4%BA%E4%BE%8B%E9%9B%86%E5%90%88"><span class="toc-number">1.9.</span> <span class="toc-text">8. 完整示例集合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B1%EF%BC%9A%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE"><span class="toc-number">1.9.1.</span> <span class="toc-text">示例1：基础配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B2%EF%BC%9A%E5%A4%8D%E6%9D%82%E7%BB%93%E6%9E%84"><span class="toc-number">1.9.2.</span> <span class="toc-text">示例2：复杂结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B3%EF%BC%9A%E5%A4%9A%E6%96%87%E6%A1%A3%E6%B5%81"><span class="toc-number">1.9.3.</span> <span class="toc-text">示例3：多文档流</span></a></li></ol></li></ol></li></ol></div></div><footer><nobr><span class="icp-title">萌</span><a class="icp-content" target="_blank" rel="noopener" href="https://icp.gov.moe/?keyword=20250230">萌ICP备20250230号</a></nobr><br><nobr><span class="icp-title">copyright</span><a class="icp-content" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a></nobr><br><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>
