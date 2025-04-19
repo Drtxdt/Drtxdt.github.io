@@ -10,7 +10,7 @@
   font-family: 'JetBrains Mono';
   src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
 }
-</style><script>var config = {"root":"/","code_fold":-1,"search":{"preload":"all","activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><script src="//unpkg.com/mermaid@10.5.0/dist/mermaid.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+</style><script>var config = {"root":"/","code_fold":-1,"search":{"preload":"all","activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"复制"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><script src="/js/gitalk.js"></script><script src="//unpkg.com/mermaid@10.5.0/dist/mermaid.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
  menuSettings: {
    zoom: "None"
  },
@@ -40,8 +40,8 @@ if (window.localStorage.getItem('theme-mode') === 'dark')
 }</style><style>:root {
  --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
  --light-background: url('/img/ce15644527e2fb43ab234946a04244312bbe036e.png@1192w.avif');
- --theme-encrypt-confirm: 'confirm'
-}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script async src="//unpkg.com/valine/dist/Valine.min.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+ --theme-encrypt-confirm: '确认'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script async src="//unpkg.com/valine/dist/Valine.min.js"></script><script async src="/js/gitalk.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
 window.mermaid = mermaid;
 code.paintMermaid();
 </script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
@@ -65,11 +65,20 @@ code.paintMermaid();
 </script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {new Valine({
  el: '#valine'
  , appId: 'pgL5vdgDo633078GkUykmOfa-gzGzoHsz'
- , appKey: 'BYhN0veAjvmoQdLPvP5cSXmu' , placeholder: 'This comment is sent by Penguin Logistics.'
+ , appKey: 'BYhN0veAjvmoQdLPvP5cSXmu' , placeholder: '此条评论委托企鹅物流发送'
  , path: window.location.pathname
  , avatar: 'retro'
  , avatar_cdn: 'https://dn-qiniu-avatar.qbox.me/avatar/'
-});document.querySelector('.lg-container')?.remove()
+});gitalk = new Gitalk({
+ clientID: 'Ov23libCFCAJKUb08fEm',
+ clientSecret: '67a38ca96d69ecdb452b7e5c18d282de930105bb',
+ repo: 'https://github.com/Drtxdt/my-blog-comments',
+ owner: 'Drtxdt',
+ admin: ['Drtxdt'],
+ distractionFreeMode: false,
+ id: location.pathname
+});
+if (document.querySelector("#gitalk")) gitalk.render("gitalk");document.querySelector('.lg-container')?.remove()
 lightGallery(document.getElementById('post-bg'), {
   plugins: [lgZoom,lgThumbnail],
   selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
@@ -92,11 +101,20 @@ document.addEventListener("pjax:complete", reset);document.addEventListener('pja
 }));reset()})</script><script class="pjax-js">reset= () => {new Valine({
  el: '#valine'
  , appId: 'pgL5vdgDo633078GkUykmOfa-gzGzoHsz'
- , appKey: 'BYhN0veAjvmoQdLPvP5cSXmu' , placeholder: 'This comment is sent by Penguin Logistics.'
+ , appKey: 'BYhN0veAjvmoQdLPvP5cSXmu' , placeholder: '此条评论委托企鹅物流发送'
  , path: window.location.pathname
  , avatar: 'retro'
  , avatar_cdn: 'https://dn-qiniu-avatar.qbox.me/avatar/'
-});document.querySelector('.lg-container')?.remove()
+});gitalk = new Gitalk({
+ clientID: 'Ov23libCFCAJKUb08fEm',
+ clientSecret: '67a38ca96d69ecdb452b7e5c18d282de930105bb',
+ repo: 'https://github.com/Drtxdt/my-blog-comments',
+ owner: 'Drtxdt',
+ admin: ['Drtxdt'],
+ distractionFreeMode: false,
+ id: location.pathname
+});
+if (document.querySelector("#gitalk")) gitalk.render("gitalk");document.querySelector('.lg-container')?.remove()
 lightGallery(document.getElementById('post-bg'), {
   plugins: [lgZoom,lgThumbnail],
   selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
@@ -112,4 +130,23 @@ lightGallery(document.getElementById('post-bg'), {
    }
  }
 });
-document.addEventListener("pjax:complete", reset);reset()})</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css" integrity="sha256-TThEtR+XalhWKkfF383YLOrI50NGNeIqrzS+q08afrY=" crossorigin="anonymous"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">About</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/friend/"><span class="navItemTitle">Friend</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>about</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2025-04-15T08:41:23.000Z" id="date"> 2025-04-15</time></div></span><br><span>Last Update: <div class="control"><time datetime="2025-04-15T08:41:23.463Z" id="updated"> 2025-04-15</time></div></span><br><span>Read Time: <div class="control">1 min</div></span><br><span id="busuanzi_container_page_pv">Page View: <span class="control" id="busuanzi_value_page_pv">loading...</span></span></div></div><hr><div id="post-content"><div id="paginator"></div></div><div id="post-footer"></div><div id="comments"><div id="valine"></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧ </a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="Change Theme"></a><a onclick="BgmControl()"><svg id="bgm-control" viewBox="0 0 30 34" fill="currentColor" style="width: auto; height: 80%; transition: transform .3s;"><path d="M25.998 23.422V11.29h3.999v12.132h-3.999zM19.497 6.234h4.001v22.243h-4.001V6.234zM12.998.867h4v32.978h-4V.867zm-6.5 5.367h4.001v22.243H6.498V6.234zm-6.5 5.056h4v12.132h-4V11.29z"></path></svg><audio id="bgm" src="/audio/bgm.mp3" loop crossorigin="anonymous"> </audio></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/suzuran.png" alt="Logo" style="margin:0;border-radius:0;"></a><h1 id="Dr"><a href="/">铃兰爱吃百香果</a></h1><div id="description"><p></p></div><div id="social-links"><a class="social" target="_blank" rel="noopener" href="https://github.com/Drtxdt"><i class="fab fa-github" alt="GitHub"></i></a></div></div><div id="aside-block"></div><footer><nobr><span class="icp-title">萌</span><a class="icp-content" target="_blank" rel="noopener" href="https://icp.gov.moe/?keyword=20250230">萌ICP备20250230号</a></nobr><br><nobr><span class="icp-title">copyright</span><a class="icp-content" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a></nobr><br><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas><script defer src="/live2d-widget/autoload.js"></script></body></html>
+document.addEventListener("pjax:complete", reset);reset()})</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css" integrity="sha256-TThEtR+XalhWKkfF383YLOrI50NGNeIqrzS+q08afrY=" crossorigin="anonymous"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">About</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/friend/"><span class="navItemTitle">Friend</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>about</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2025-04-15T08:41:23.000Z" id="date"> 2025-04-15</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2025-04-17T12:58:06.468Z" id="updated"> 2025-04-17</time></div></span><br><span>文章总字数: <div class="control">353</div></span><br><span>预计阅读时间: <div class="control">1 分钟</div></span><br><span id="busuanzi_container_page_pv">页面浏览: <span class="control" id="busuanzi_value_page_pv">加载中...</span></span></div></div><hr><div id="post-content"><h1 id="Hello-World！"><a href="#Hello-World！" class="headerlink" title="Hello World！"></a>Hello World！</h1><p>你好，世界！</p>
+<p class='item-img' data-src='/images/rabbit.jpg'><img src="/images/rabbit.jpg" alt="rabbit"></p>
+<h2 id="这是哪里？"><a href="#这是哪里？" class="headerlink" title="这是哪里？"></a>这是哪里？</h2><p>这里是铃兰爱吃百香果的个人博客！欢迎诸位~</p>
+<h2 id="这里有什么？"><a href="#这里有什么？" class="headerlink" title="这里有什么？"></a>这里有什么？</h2><p>本人只是一个入门的编程蒟蒻，目前主修语言是C++<del>C艹</del>（以后一定还会有其他语言！），作为一个个人博客，我会在上面分享自己学到的知识和心得体会</p>
+<p>本站遵循CC-SA-4.0开源协议，欢迎诸位大佬引用我的文章</p>
+<h2 id="为什么分为普通级和加密级？"><a href="#为什么分为普通级和加密级？" class="headerlink" title="为什么分为普通级和加密级？"></a>为什么分为普通级和加密级？</h2><p><del>你猜</del>其实也没有什么啦<del>大佬可以去GitHub向我发一个issue，或者使用QQ3775516122来联系我！十分乐意和诸位大佬玩</del></p>
+<h2 id="本站有什么历史？"><a href="#本站有什么历史？" class="headerlink" title="本站有什么历史？"></a>本站有什么历史？</h2><ul>
+<li>2025&#x2F;3&#x2F;3 一个好日子，建站，Hello World</li>
+<li>2025&#x2F;3&#x2F;4 学会在GitHub上部署GitHub Pages</li>
+<li>2025&#x2F;3&#x2F;5 开始正式写博客<del>学术垃圾</del></li>
+<li>2025&#x2F;3&#x2F;6 拿到了萌国备案，正式声明为开源</li>
+<li>2025&#x2F;3&#x2F;10 添加了头图<del>表明成分</del></li>
+<li>2025&#x2F;3&#x2F;31 文章突破十五篇</li>
+<li>2025&#x2F;4&#x2F;10 增加了ABOUT板块和友链板块</li>
+<li>2025&#x2F;4&#x2F;15 添加了看板娘系统</li>
+<li>2025&#x2F;4&#x2F;16 将看板娘优化了一下（静态部署）</li>
+<li>2025&#x2F;4&#x2F;16 添加了评论系统</li>
+</ul>
+<h2 id="BGM是什么，真好听"><a href="#BGM是什么，真好听" class="headerlink" title="BGM是什么，真好听"></a>BGM是什么，真好听</h2><p>BGM使用塞壬唱片的《浸春芜》，寓意万物生长，欣欣向荣</p>
+<div id="paginator"></div></div><div id="post-footer"></div><div id="comments"><div class="selector"><button class="valine-sel"></button><button class="gitalk-sel"></button></div><div id="valine"></div><div id="gitalk"></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a><a onclick="BgmControl()"><svg id="bgm-control" viewBox="0 0 30 34" fill="currentColor" style="width: auto; height: 80%; transition: transform .3s;"><path d="M25.998 23.422V11.29h3.999v12.132h-3.999zM19.497 6.234h4.001v22.243h-4.001V6.234zM12.998.867h4v32.978h-4V.867zm-6.5 5.367h4.001v22.243H6.498V6.234zm-6.5 5.056h4v12.132h-4V11.29z"></path></svg><audio id="bgm" src="/audio/bgm.mp3" loop crossorigin="anonymous"> </audio></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/suzuran.png" alt="Logo" style="margin:0;border-radius:0;"></a><h1 id="Dr"><a href="/">铃兰爱吃百香果</a></h1><div id="description"><p></p></div><div id="social-links"><a class="social" target="_blank" rel="noopener" href="https://github.com/Drtxdt"><i class="fab fa-github" alt="GitHub"></i></a></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hello-World%EF%BC%81"><span class="toc-text">Hello World！</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%99%E6%98%AF%E5%93%AA%E9%87%8C%EF%BC%9F"><span class="toc-text">这是哪里？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%99%E9%87%8C%E6%9C%89%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">这里有什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%88%86%E4%B8%BA%E6%99%AE%E9%80%9A%E7%BA%A7%E5%92%8C%E5%8A%A0%E5%AF%86%E7%BA%A7%EF%BC%9F"><span class="toc-text">为什么分为普通级和加密级？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E7%AB%99%E6%9C%89%E4%BB%80%E4%B9%88%E5%8E%86%E5%8F%B2%EF%BC%9F"><span class="toc-text">本站有什么历史？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BGM%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%8C%E7%9C%9F%E5%A5%BD%E5%90%AC"><span class="toc-text">BGM是什么，真好听</span></a></li></ol></li></ol></div></div><footer><nobr><span class="icp-title">萌</span><a class="icp-content" target="_blank" rel="noopener" href="https://icp.gov.moe/?keyword=20250230">萌ICP备20250230号</a></nobr><br><nobr><span class="icp-title">copyright</span><a class="icp-content" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a></nobr><br><nobr>构建自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> 主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas><script defer src="/live2d-widget/autoload.js"></script></body></html>
